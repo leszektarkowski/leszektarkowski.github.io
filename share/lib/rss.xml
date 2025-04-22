@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Notatki]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Notatki</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 22 Apr 2025 07:12:01 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 22 Apr 2025 07:12:00 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Projekt Programistyczny]]></title><description><![CDATA[ 
+ <br><br><br><br>Celem tego projektu jest napisanie programu komputerowego symulującego ruch ciała w jednorodnym polu grawitacyjnym (rzut ukośny) bez oporów powietrza. Kluczowym elementem projektu jest porównanie trajektorii uzyskanej z dokładnego rozwiązania analitycznego z trajektorią obliczoną przy użyciu prostej metody numerycznej – metody Eulera. Projekt ma na celu zilustrowanie podstawowych technik symulacji komputerowych w fizyce oraz analizę dokładności metod numerycznych w zależności od parametrów symulacji.<br><br>Rozważmy ruch punktu materialnego o masie m wyrzuconego z początku układu współrzędnych (lub z wysokości h0​) z prędkością początkową v0​ pod kątem θ do poziomu, w polu grawitacyjnym o stałym przyspieszeniu g, skierowanym przeciwnie do osi y. Pomijamy opór powietrza.<br>Rozwiązanie analityczne:<br>
+<br>Równania ruchu (trajektorii) w postaci parametrycznej x(t),y(t) oraz zależności składowych prędkości od czasu vx​(t),vy​(t) są dane przez:
+
+<br>Składowe prędkości początkowej:  
+
+<br>
+<br>
+
+
+<br>Położenie w funkcji czasu:
+
+<br>
+<br>
+
+
+<br>Prędkość w funkcji czasu:
+
+<br>
+<br>
+
+
+
+
+<br>Rozwiązanie numeryczne (Metoda Eulera):<br>
+Metoda Eulera jest prostą metodą całkowania numerycznego równań różniczkowych. W naszym przypadku mamy równania na prędkość i położenie w postaci wektorowej.
+
+<br>
+<br>  gdzie , a wektor przyspieszenia .
+
+
+<br>Metoda Eulera aproksymuje pochodne skończonymi różnicami dla małego kroku czasowego :<br>
+<br>    
+<br>
+<br>Rozpoczynając od warunków początkowych  i , iteracyjnie obliczamy położenie i prędkość w kolejnych chwilach czasu .<br><br>
+<br>
+Wybór środowiska: Wybierz język programowania. Do wyboru
+
+<br>Python z bibliotekami numpy i matplotlib
+<br>py5 - <a rel="noopener nofollow" class="external-link" href="https://py5coding.org/" target="_blank">https://py5coding.org/</a>
+<br>p5js - <a rel="noopener nofollow" class="external-link" href="https://p5js.org/" target="_blank">https://p5js.org/</a>
+<br>inne, ale łatwo dostępne. 
+<br>W szczególności wykluczamy oprogramowanie komercyjne takie jak Matlab, Mathematica.
+
+
+<br>
+Implementacja rozwiązania analitycznego: Napisz funkcję (lub funkcje), która dla zadanych parametrów  i czasu  zwraca analityczne położenie ).
+
+<br>
+Implementacja metody Eulera: Napisz funkcję (lub moduł), która dla zadanych parametrów  oraz kroku czasowego  oblicza numerycznie trajektorię ruchu aż do momentu upadku na ziemię . Funkcja powinna zwracać sekwencję punktów  trajektorii.
+
+<br>
+Wizualizacja: Wygeneruj wykresy porównujące trajektorię analityczną z trajektorią numeryczną uzyskaną metodą Eulera dla wybranego zestawu parametrów początkowych i ustalonego kroku Δt.
+
+<br>
+Analiza dokładności:
+
+<br>Dla ustalonego zestawu parametrów początkowych (v0​,θ,h0​) przeprowadź symulacje numeryczne metodą Eulera dla kilku różnych wartości kroku czasowego Δt (np. 0.1s,0.05s,0.01s,0.005s,0.001s).
+<br>Dla każdej wartości Δt oblicz miarę błędu rozwiązania numerycznego w porównaniu do analitycznego. Może to być np.:
+<br>Różnica w zasięgu rzutu.
+<br>Różnica w maksymalnej wysokości.
+<br>Przedstaw na wykresie zależność wybranej miary błędu od wielkości kroku czasowego Δt. Zanalizuj tę zależność (np. czy błąd maleje liniowo z Δt?).
+
+
+<br><br><br>
+<br>Kod źródłowy programu (dobrze skomentowany).
+<br>Krótki raport (ok. 2-4 strony) zawierający:
+
+<br>Opis implementacji (krótko).
+<br>Wykresy porównujące trajektorie (analityczną i numeryczną dla przynajmniej jednej wartości Δt).
+<br>Analizę wpływu kroku czasowego Δt na dokładność wyniku (w tym wykres błąd vs Δt).
+<br>Dyskusję wyników, wnioski i ewentualne napotkane problemy.
+
+
+<br><br>
+<br>Implementacja bardziej zaawansowanej metody numerycznej (np. metoda Rungego-Kutty) i porównanie jej dokładności z metodą Eulera.
+<br>Uwzględnienie oporu powietrza (np. siła oporu proporcjonalna do  lub ) i analiza jego wpływu na trajektorię (w tym przypadku rozwiązanie analityczne może nie istnieć lub być skomplikowane).
+<br>Stworzenie interaktywnej wizualizacji lub animacji rzutu.
+]]></description><link>Fizyka\Ćwiczenia WSB-NLU\Projekty\Projekt.html</link><guid isPermaLink="false">Fizyka/Ćwiczenia WSB-NLU/Projekty/Projekt.md</guid><pubDate>Tue, 22 Apr 2025 07:08:33 GMT</pubDate></item></channel></rss>
