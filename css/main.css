@@ -454,6 +454,99 @@ a { color: inherit; }
   color: var(--muted);
 }
 
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.cookie-settings {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+
+.cookie-settings:hover { color: var(--ink); }
+
+/* ---------- Cookie banner ---------- */
+
+.cookie-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  width: min(720px, calc(100% - 32px));
+  padding: 0.9rem 0.9rem 0.9rem 1.4rem;
+  transform: translateX(-50%);
+  background: rgba(248, 247, 242, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(52, 51, 47, 0.12);
+}
+
+.cookie-banner p {
+  flex: 1;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.cookie-banner-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+.cookie-banner button {
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cookie-banner button:hover { background: var(--pill-strong); }
+
+.cookie-banner button.primary {
+  color: var(--bg-top);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.cookie-banner button.primary:hover { background: #000; }
+
+@media (max-width: 560px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  .cookie-banner-actions button { flex: 1; }
+}
+
 /* ---------- Print ---------- */
 
 .print-only { display: none !important; }
