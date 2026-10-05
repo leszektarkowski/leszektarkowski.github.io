@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kursy na WSB-NLU · Leszek Tarkowski</title>
+  <meta name="description" content="Materiały do kursów prowadzonych na WSB-NLU">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="canonical" href="https://tarkowski.org/wsbnlu/">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header class="page-header">
+
+      <nav class="title-bar no-print">
+        <p class="header-title"><a href="/">Leszek Tarkowski</a> / WSB-NLU</p>
+      </nav>
+
+      <h1 class="header-name">Kursy na WSB-NLU</h1>
+
+    </header>
+
+    <!-- begin Python course -->
+    <article class="course">
+
+      <header class="course-header">
+        <h2 class="course-title">Wprowadzenie do programowania w języku Python</h2>
+      </header>
+
+      <section class="content-section prose">
+        <header class="section-header">
+          <h3>Jak zainstalować Pythona</h3>
+        </header>
+
+        <div>
+          <h4>Instalacja interpretera</h4>
+          <p><strong>Windows:</strong> instalator z <a href="https://www.python.org/downloads/">python.org</a></p>
+          <ul>
+            <li>zaznaczyć <strong>„Add python.exe to PATH”</strong></li>
+            <li>w terminalu działa polecenie <code>py</code> lub <code>python</code></li>
+          </ul>
+          <p><strong>macOS:</strong> instalator z <a href="https://www.python.org/downloads/">python.org</a> lub <a href="https://brew.sh">Homebrew</a> (<code>brew install python</code>)</p>
+          <ul>
+            <li>w terminalu: <code>python3</code></li>
+          </ul>
+          <p><strong>Alternatywa:</strong> <a href="https://docs.astral.sh/uv/"><code>uv</code></a>, czyli szybki menedżer Pythona i pakietów</p>
+          <pre><code>uv python install</code></pre>
+
+          <h4>Sprawdzenie instalacji</h4>
+          <pre><code>python --version      <span class="c"># Windows</span>
+python3 --version     <span class="c"># macOS, Linux</span></code></pre>
+          <p>Uruchomienie interaktywnej konsoli (REPL):</p>
+          <pre><code><span class="c">$</span> python3
+<span class="c">&gt;&gt;&gt;</span> 2 + 2
+4
+<span class="c">&gt;&gt;&gt;</span> exit()</code></pre>
+          <p><strong>REPL</strong> = <em>Read, Eval, Print, Loop</em>: wczytaj, wykonaj, wypisz, powtórz.</p>
+
+          <h4>VS Code</h4>
+          <ol>
+            <li>Zainstalować VS Code (<a href="https://code.visualstudio.com">code.visualstudio.com</a>).</li>
+            <li>Zainstalować rozszerzenie <strong>Python</strong> (Microsoft).</li>
+            <li>Wybrać interpreter: <kbd>Ctrl+Shift+P</kbd> → <em>Python: Select Interpreter</em>.</li>
+            <li>Utworzyć plik <code>.py</code> i uruchomić przyciskiem ▶ lub w terminalu.</li>
+          </ol>
+          <p class="note">Na macOS zamiast <kbd>Ctrl</kbd> używamy <kbd>Cmd</kbd>.</p>
+
+          <h4>Notatniki: Jupyter i Colab</h4>
+          <ul>
+            <li>Kod podzielony na <strong>komórki</strong>, wynik pod każdą komórką.</li>
+            <li>Dobre do eksperymentów i analizy danych krok po kroku.</li>
+            <li><strong>Google Colab</strong> (<a href="https://colab.research.google.com">colab.research.google.com</a>): notatnik w przeglądarce, bez instalacji.</li>
+          </ul>
+          <table>
+            <thead>
+              <tr><th>Skrypt <code>.py</code></th><th>Notatnik <code>.ipynb</code></th></tr>
+            </thead>
+            <tbody>
+              <tr><td>program uruchamiany w całości</td><td>kod wykonywany fragmentami</td></tr>
+              <tr><td>automatyzacja, narzędzia</td><td>eksploracja, prezentacja wyników</td></tr>
+            </tbody>
+          </table>
+
+          <h4>Pakiety i środowiska wirtualne</h4>
+          <p>Pakiety spoza biblioteki standardowej instalujemy przez <code>pip</code>:</p>
+          <pre><code>python -m pip install matplotlib</code></pre>
+          <p><strong>Środowisko wirtualne</strong> to osobny „katalog z Pythonem” dla jednego projektu:</p>
+          <pre><code>python -m venv .venv
+source .venv/bin/activate      <span class="c"># macOS, Linux</span>
+.venv\Scripts\activate         <span class="c"># Windows</span></code></pre>
+          <p>Po co? Różne projekty mogą potrzebować różnych wersji tych samych pakietów.</p>
+        </div>
+      </section>
+
+      <section class="content-section prose">
+        <header class="section-header">
+          <h3>Bibliografia</h3>
+        </header>
+
+        <div>
+          <h4>Podstawowa</h4>
+          <ol class="biblio">
+            <li>E. Matthes, <em>Python. Instrukcje dla programisty. Wydanie III</em>, Helion, Gliwice 2023. <span>Podstawy języka, klasy, pliki i wyjątki oraz projekt wizualizacji danych w matplotlib; zakresem najbliższa programowi kursu.</span></li>
+            <li>A. Sweigart, <em>Automatyzacja nudnych zadań z Pythonem. Wydanie II</em>, Helion, Gliwice 2021. <span>Podstawy języka na przykładach automatyzacji pracy biurowej: tekst, wyrażenia regularne, pliki, arkusze. Angielskie wydanie III (No Starch Press, 2025) jest dostępne bezpłatnie <a href="https://automatetheboringstuff.com">online</a>.</span></li>
+          </ol>
+
+          <h4>Uzupełniająca</h4>
+          <ol class="biblio">
+            <li>J. VanderPlas, <em>Python Data Science. Niezbędne narzędzia do pracy z danymi. Wydanie II</em>, Helion, Gliwice 2024. <span>Rozdziały o NumPy i matplotlib do bloku 3.1; część o pandas jako dalsza lektura.</span></li>
+            <li>M. Lutz, <em>Python. Wprowadzenie. Wydanie VI</em>, Helion, Gliwice 2025. <span>Kompendium języka (ok. 1350 stron) dla studentów, którzy chcą zrozumieć mechanizmy głębiej.</span></li>
+          </ol>
+
+          <h4>Źródła otwarte</h4>
+          <ul>
+            <li>Oficjalny samouczek Pythona: <a href="https://docs.python.org/pl/3/tutorial/">docs.python.org/pl/3/tutorial</a>.</li>
+            <li>Samouczki matplotlib: <a href="https://matplotlib.org/stable/tutorials/index.html">matplotlib.org/stable/tutorials</a>.</li>
+          </ul>
+        </div>
+      </section>
+
+    </article>
+    <!-- end Python course -->
+
+    <footer class="page-footer">
+      <p class="footer-line">Leszek Tarkowski, 2026</p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

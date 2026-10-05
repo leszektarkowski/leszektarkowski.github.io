@@ -230,7 +230,8 @@ a { color: inherit; }
 
 .section-header { margin-bottom: 1.75rem; }
 
-.section-header h2 {
+.section-header h2,
+.section-header h3 {
   margin: 0;
   font-family: var(--serif);
   font-weight: 400;
@@ -311,6 +312,130 @@ a { color: inherit; }
   text-decoration: underline;
   text-decoration-color: var(--line);
   text-underline-offset: 3px;
+}
+
+/* ---------- Course pages ---------- */
+
+.course-header {
+  padding: 2.5rem 0 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.course-title {
+  max-width: 18em;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.page-header .title-bar .header-title a { margin-right: 0.35em; }
+
+.prose { color: var(--ink-soft); }
+
+.prose h4 {
+  margin: 2.5rem 0 0.9rem;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.prose h4:first-child { margin-top: 0.4rem; }
+
+.prose p { margin: 0 0 0.9rem; }
+
+.prose ul,
+.prose ol {
+  margin: 0 0 1rem;
+  padding-left: 1.4rem;
+}
+
+.prose li { margin: 0.3rem 0; }
+.prose li::marker { color: var(--muted); }
+
+.prose strong { font-weight: 600; color: var(--ink); }
+
+.prose a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: rgba(52, 51, 47, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.prose a:hover { text-decoration-color: var(--ink); }
+
+.prose code,
+.prose kbd {
+  font-family: var(--mono);
+  font-size: 0.82em;
+  color: var(--ink);
+}
+
+.prose :not(pre) > code,
+.prose kbd {
+  padding: 0.1em 0.4em;
+  background: var(--pill);
+  border-radius: 4px;
+}
+
+.prose kbd {
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+}
+
+.prose pre {
+  margin: 0 0 1.1rem;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+.prose pre code { font-size: 13px; }
+.prose pre .c { color: var(--muted); }
+
+.prose .note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.prose table {
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  border-collapse: collapse;
+}
+
+.prose th,
+.prose td {
+  padding: 0.6rem 1rem 0.6rem 0;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose th {
+  font-weight: 400;
+  color: var(--ink);
+  border-bottom-color: rgba(52, 51, 47, 0.3);
+}
+
+.prose .biblio li { margin: 0 0 1rem; }
+.prose .biblio em { color: var(--ink); }
+
+.prose .biblio span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.92rem;
+  color: var(--muted);
 }
 
 /* ---------- Footer ---------- */
